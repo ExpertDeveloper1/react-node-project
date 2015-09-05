@@ -1,5 +1,6 @@
 var webpack = require('webpack');
 var bower_dir = __dirname + '/bower_components';
+var node_dir=__dirname + '/node_modules';
 
 var config = {
     addVendor: function (name, path) {
@@ -41,4 +42,8 @@ var config = {
 };
 config.addVendor('react', bower_dir + '/react/react.js');
 config.addVendor('jquery', bower_dir + '/jquery/dist/jquery.min.js');
+config.addVendor('underscore',node_dir+'/underscore/underscore.js');
+config.addVendor('keymirror',node_dir+'/keymirror/index.js');
+config.addVendor('events',node_dir+'node-libs-browser/node_modules/events/events.js');
+config.addVendor('object-assign'+node_dir+'object-assign/index.js')
 module.exports = config;

@@ -52,7 +52,7 @@ module.exports = React.createClass({
             success: function (data) {
                 // this.setState({commitServerInfo: JSON.parse(data)});
                 //根据this.props.body过滤并排序commitServerInfo
-                var originCommitInfo = JSON.parse(data);
+                var originCommitInfo = data;
                 var sortCommitInfo = originCommitInfo.map(tableConvert(props.body));
 
                 ////sort
